@@ -4,3 +4,32 @@
 * 0 - *negative*, 2 - *neutral*, 4 - *positive*
 * Concerned columns: **target** and **text**
 ---
+**Code**
+* Code be found [Kaggle Notebook](https://www.kaggle.com/code/kartikeysharmaah/1rt720-notebook-2)
+* Download model parameters and tokens
+---
+**Multi-head Self-attention**
+* Idea is to 'look' at past and future tokens
+* Compute "self-attention" from a token as   
+  $\implies sa[x_j] = \Sigma_{i=1}^{N}att[x_i,x_j]v_j$
+* attention is the dot product *keys* and *queries*
+* Keys and queries are weighted sums of $x$
+* Formula in vector form   
+  $\implies \text{SA} = \text{Softmax}(\frac{QK^T}{\sqrt{D_q}})V^T$   
+![multi-headselfattention](https://miro.medium.com/max/469/1*GsLQLch51d7excmuAi4UzQ.png)
+---
+**Transformer (for Encoder)**
+* Includes multi-head self-attention block
+* passed through Layer norm
+* passed through perceptron
+* again passed through Layer norm
+* Residual connections over self-attention block and perception
+* Add positional encoding before passing through the block   
+  <img src="https://heidloff.net/assets/img/2023/02/transformers.png" width="470px"/>
+---
+**Pre-training**
+* Uses self-supervision
+* **Mask certain tokens**
+* Add *linear + softmax*
+* Predict the masked tokens
+* Expect the model to learn the syntax of the sentence
