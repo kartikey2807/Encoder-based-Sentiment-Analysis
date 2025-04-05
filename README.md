@@ -33,3 +33,12 @@
 * Add *linear + softmax*
 * Predict the masked tokens
 * Expect the model to learn the syntax of the sentence
+---
+**Fine-tuning** for sentiment analysis
+* add the 'cls' tag
+* create embeddings
+* apply linear+sigmoid
+* train the encoder model
+* Idea: this tag captures the sense of the entire tweet
+* get logits for 'cls' tag
+* Apply binary loss
