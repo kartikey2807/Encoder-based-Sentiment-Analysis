@@ -6,7 +6,8 @@
 ---
 **Code**
 * Code be found [Kaggle Notebook](https://www.kaggle.com/code/kartikeysharmaah/1rt720-notebook-2)
-* Download model parameters and tokens
+* Download [model parameters](https://www.kaggle.com/models/kartikeysharmaah/bert-encoder-model)
+* Download training and validation dataset, and tokens from [here](https://www.kaggle.com/datasets/kartikeysharmaah/twitter-text-dataset)
 ---
 **Multi-head Self-attention**
 * Idea is to 'look' at past and future tokens
