@@ -5,7 +5,7 @@
 * Concerned columns: **target** and **text**
 ---
 **Code**
-* Code be found [Kaggle Notebook](https://www.kaggle.com/code/kartikeysharmaah/1rt720-notebook-2)
+* Kaggle Notebooks [here](https://www.kaggle.com/code/kartikeysharmaah/1rt720-notebook-2), [here](https://www.kaggle.com/code/kartikeysharmaah/1tr720-notebook-3)
 * Download [model parameters](https://www.kaggle.com/models/kartikeysharmaah/bert-encoder-model)
 * Download training and validation dataset, and tokens from [here](https://www.kaggle.com/datasets/kartikeysharmaah/twitter-text-dataset)
 ---
@@ -43,3 +43,9 @@
 * Idea: this tag captures the sense of the entire tweet
 * get logits for 'cls' tag
 * Apply binary loss
+---
+**Results**
+|Dataset|Accuracy|Binary Loss|
+|---|---|---|
+|Training|77.36%|0.47|
+|Validation|76.81%|0.48|
