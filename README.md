@@ -46,6 +46,6 @@
 ---
 **Results**
 |Dataset|Accuracy|Binary Loss|
-|---|---|---|
+| :- | :- | :- |
 |Training|77.36%|0.47|
 |Validation|76.81%|0.48|
