@@ -41,8 +41,7 @@
 * apply linear+sigmoid
 * train the encoder model
 * Idea: this tag captures the sense of the entire tweet
-* get logits for 'cls' tag
-* Apply binary loss
+* get logits for 'cls' tag and apply binary loss
 ---
 **Results**
 |Dataset|Accuracy|Binary Loss|
