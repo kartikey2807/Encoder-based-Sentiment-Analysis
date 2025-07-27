@@ -12,11 +12,13 @@
 **Multi-head Self-attention**
 * Idea is to 'look' at past and future tokens
 * Compute "self-attention" from a token as   
-  $\implies sa[x_j] = \Sigma_{i=1}^{N}att[x_i,x_j]v_j$
+  $\implies sa[x_i] = \Sigma_{j=1}^{N}att[x_i,x_j]v_j$
+* *Queries*: How this word attends to others?
+* *Keys*: the other attended words
 * attention is the dot product *keys* and *queries*
 * Keys and queries are weighted sums of $x$
 * Formula in vector form   
-  $\implies \text{SA} = \text{Softmax}(\frac{QK^T}{\sqrt{D_q}})V^T$   
+  $\implies \text{SA} = \text{Softmax}(\frac{QK^T}{\sqrt{D_q}})V$   
 ![multi-headselfattention](https://miro.medium.com/max/469/1*GsLQLch51d7excmuAi4UzQ.png)
 ---
 **Transformer (for Encoder)**
