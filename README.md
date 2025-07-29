@@ -13,9 +13,9 @@
 * Idea is to 'look' at past and future tokens
 * Compute "self-attention" from a token as   
   $\implies sa[x_i] = \Sigma_{j=1}^{N}att[x_i,x_j]v_j$
-* *Queries*: How this word attends to others?
+* *Queries*: How does this word attend to others?
 * *Keys*: the other attended words
-* attention is the dot product *keys* and *queries*
+* attention is the dot product b/w *keys* and *queries*
 * Keys and queries are weighted sums of $x$
 * Formula in vector form   
   $\implies \text{SA} = \text{Softmax}(\frac{QK^T}{\sqrt{D_q}})V$   
@@ -38,7 +38,7 @@
 * Expect the model to learn the syntax of the sentence
 ---
 **Fine-tuning** for sentiment analysis
-* add the 'cls' tag
+* add the \<cls\> tag
 * create embeddings
 * apply linear+sigmoid
 * train the encoder model
