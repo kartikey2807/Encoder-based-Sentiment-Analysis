@@ -8,7 +8,7 @@
 * *Queries*: How does this word attend to others?
 * *Keys*: the other attended words
 * *Values*: weights associated with self-attention term
-* attention is the dot product between *keys* and *queries*
+* *Attention* is the dot product between key and queries
 * Keys and queries are weighted sums of $x$
 * Formula in vector form   
   $\implies \text{SA} = \text{Softmax}(\frac{QK^T}{\sqrt{D_q}})V$   
