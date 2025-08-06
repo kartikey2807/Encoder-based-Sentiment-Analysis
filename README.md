@@ -1,21 +1,14 @@
 # Encoder-based Sentiment Analysis
-**Dataset**
-* [Sentiment140 dataset with 1.6 million tweets](https://www.kaggle.com/datasets/kazanova/sentiment140/data)
-* 0 - *negative*, 2 - *neutral*, 4 - *positive*
-* Concerned columns: **target** and **text**
----
-**Code**
-* Kaggle Notebooks [here](https://www.kaggle.com/code/kartikeysharmaah/1rt720-notebook-2), [here](https://www.kaggle.com/code/kartikeysharmaah/1tr720-notebook-3)
-* Download [model parameters](https://www.kaggle.com/models/kartikeysharmaah/bert-encoder-model)
-* Download training and validation dataset, and tokens from [here](https://www.kaggle.com/datasets/kartikeysharmaah/twitter-text-dataset)
----
+| [Dataset](https://www.kaggle.com/datasets/kazanova/sentiment140/data) | [Notebook 1](https://www.kaggle.com/code/kartikeysharmaah/1rt720-notebook-2) | [Notebook 2](https://www.kaggle.com/code/kartikeysharmaah/1tr720-notebook-3) | [model parameters](https://www.kaggle.com/models/kartikeysharmaah/bert-encoder-model) |
+
 **Multi-head Self-attention**
-* Idea is to 'look' at past and future tokens
-* Compute "self-attention" from a token as   
+* Idea is to ***"look"*** at past and future tokens
+* Compute "self-attention" from the token as   
   $\implies sa[x_i] = \Sigma_{j=1}^{N}att[x_i,x_j]v_j$
 * *Queries*: How does this word attend to others?
 * *Keys*: the other attended words
-* attention is the dot product b/w *keys* and *queries*
+* *Values*: weights associated with self-attention term
+* attention is the dot product between *keys* and *queries*
 * Keys and queries are weighted sums of $x$
 * Formula in vector form   
   $\implies \text{SA} = \text{Softmax}(\frac{QK^T}{\sqrt{D_q}})V$   
