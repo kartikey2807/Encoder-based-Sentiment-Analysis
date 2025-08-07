@@ -19,7 +19,7 @@
 * passed through Layer norm
 * passed through perceptron
 * again passed through Layer norm
-* Residual connections over self-attention block and perception
+* Residual connections over self-attention block and perceptron
 * Add positional encoding before passing through the block   
   <img src="https://heidloff.net/assets/img/2023/02/transformers.png" width="470px"/>
 ---
@@ -36,7 +36,7 @@
 * apply linear+sigmoid
 * train the encoder model
 * Idea: this tag captures the sense of the entire tweet
-* get logits for 'cls' tag and apply binary loss
+* get logits for \<cls\> tag and apply binary loss
 ---
 **Results**
 |Dataset|Accuracy|Binary Loss|
