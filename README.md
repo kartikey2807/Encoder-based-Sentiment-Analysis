@@ -2,15 +2,14 @@
 | [Dataset](https://www.kaggle.com/datasets/kazanova/sentiment140/data) | [Notebook 1](https://www.kaggle.com/code/kartikeysharmaah/1rt720-notebook-2) | [Notebook 2](https://www.kaggle.com/code/kartikeysharmaah/1tr720-notebook-3) | [model parameters](https://www.kaggle.com/models/kartikeysharmaah/bert-encoder-model) |
 
 **Multi-head Self-attention**
-* Idea is to ***"look"*** at past and future tokens
-* Compute "self-attention" from the token as   
+* Idea is to **"attend to"** past and future tokens
+* Compute the self-attention of each token as   
   $\implies sa[x_i] = \Sigma_{j=1}^{N}att[x_i,x_j]v_j$
-* *Queries*: How does this word attend to others?
-* *Keys*: the other attended words
-* *Values*: weights associated with self-attention term
-* *Attention* is the dot product between key and queries
-* Keys and queries are weighted sums of $x$
-* Formula in vector form   
+* ***Query***: token that looks at other tokens
+* ***Key***: the other 'looked at' tokens
+* ***Value***: weights for each cross-attention term
+* ***Attention***: Dot products between Keys and Queries
+* ***Vector Form***   
   $\implies \text{SA} = \text{Softmax}(\frac{QK^T}{\sqrt{D_q}})V$   
 ![multi-headselfattention](https://miro.medium.com/max/469/1*GsLQLch51d7excmuAi4UzQ.png)
 ---
@@ -19,8 +18,8 @@
 * passed through Layer norm
 * passed through perceptron
 * again passed through Layer norm
-* Residual connections over self-attention block and perceptron
-* Add positional encoding before passing through the block   
+* Skip connection over self-attention and perceptron
+* Positional encoding before passing to Encoder   
   <img src="https://heidloff.net/assets/img/2023/02/transformers.png" width="470px"/>
 ---
 **Pre-training**
@@ -28,7 +27,7 @@
 * **Mask certain tokens**
 * Add *linear + softmax*
 * Predict the masked tokens
-* Expect the model to learn the syntax of the sentence
+* Expect the models to learn the syntax of a sentence
 ---
 **Fine-tuning** for sentiment analysis
 * add the \<cls\> tag
