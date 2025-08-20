@@ -33,7 +33,7 @@
 * Expect the models to learn the syntax of a sentence
 ---
 
-**Fine-tuning** for sentiment analysis
+**Fine-tuning**
 * add the \<cls\> tag
 * apply BCE loss
 * this tag captures the 'sentiment' of the overall tweet
