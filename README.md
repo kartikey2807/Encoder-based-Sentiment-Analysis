@@ -11,7 +11,9 @@
 * ***Attention***: Dot products between Keys and Queries
 * ***Vector Form***   
   $\implies \text{SA} = \text{Softmax}(\frac{QK^T}{\sqrt{D_q}})V$   
+
 ![multi-headselfattention](https://miro.medium.com/max/469/1*GsLQLch51d7excmuAi4UzQ.png)
+
 ---
 **Transformer (for Encoder)**
 * Includes multi-head self-attention block
@@ -19,8 +21,9 @@
 * passed through perceptron
 * again passed through Layer norm
 * Skip connection over self-attention and perceptron
-* Positional encoding before passing to Encoder   
-  <img src="https://heidloff.net/assets/img/2023/02/transformers.png" width="470px"/>
+* Positional encoding before passing to Encoder
+<img src="https://heidloff.net/assets/img/2023/02/transformers.png" width="470px"/>
+
 ---
 **Pre-training**
 * Uses self-supervision
@@ -29,13 +32,11 @@
 * Predict the masked tokens
 * Expect the models to learn the syntax of a sentence
 ---
+
 **Fine-tuning** for sentiment analysis
 * add the \<cls\> tag
-* create embeddings
-* apply linear+sigmoid
-* train the encoder model
-* Idea: this tag captures the sense of the entire tweet
-* get logits for \<cls\> tag and apply binary loss
+* apply BCE loss
+* this tag captures the 'sentiment' of the overall tweet
 ---
 **Results**
 |Dataset|Accuracy|Binary Loss|
