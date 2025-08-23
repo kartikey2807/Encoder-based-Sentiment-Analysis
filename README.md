@@ -25,7 +25,7 @@
 <img src="https://heidloff.net/assets/img/2023/02/transformers.png" width="470px"/>
 
 ---
-**Training**
+**Training Phases**
 |Pre-training|Fine tuning|
 | :- | :- |
 |Mask tokens randomly<br> and predict them|Add a \<cls\> tag for<br> each sentence|
