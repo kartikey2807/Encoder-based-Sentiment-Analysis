@@ -32,6 +32,8 @@
 |Linear + Softmax|Linear + Sigmoid|
 |Model learns sentence syntax|Classifies sentiment for tweets|
 
+---
+**Results**
 |Dataset|Accuracy|Binary Loss|
 | :- | :- | :- |
 |Training|77.36%|0.47|
