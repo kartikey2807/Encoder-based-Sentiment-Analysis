@@ -25,20 +25,13 @@
 <img src="https://heidloff.net/assets/img/2023/02/transformers.png" width="470px"/>
 
 ---
-**Pre-training**
-* Uses self-supervision
-* **Mask certain tokens**
-* Add *linear + softmax*
-* Predict the masked tokens
-* Expect the models to learn the syntax of a sentence
----
+**Training**
+|Pre-training|Fine tuning|
+| :- | :- |
+|Mask tokens randomly<br> and predict them|Add a \<cls\> tag for<br> each sentence|
+|Linear + Softmax|Linear + Sigmoid|
+|Model learns sentence syntax|Classifies sentiment for tweets|
 
-**Fine-tuning**
-* add the \<cls\> tag
-* apply BCE loss
-* this tag captures the 'sentiment' of the overall tweet
----
-**Results**
 |Dataset|Accuracy|Binary Loss|
 | :- | :- | :- |
 |Training|77.36%|0.47|
